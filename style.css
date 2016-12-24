@@ -1,0 +1,138 @@
+body {
+    background: url(images/bg.png) no-repeat; 
+    background-size: 100% auto;
+    background-color: #0A0D10;
+}
+
+/* Navbar Style */
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: .75rem 1.75rem;
+    overflow: hidden;
+}
+
+#nav-butt {
+    float: right;
+    padding: 25px 17px;
+}
+
+#nav-butt a {
+    display: block;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+
+    /* Fade hover effect */
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+
+    transition:.5s;
+}
+
+/* Navbar Custom hovers */
+#pro:hover {
+    color: #458EE5;
+}
+
+#des:hover {
+    color: #F6A623;
+}
+
+#ux:hover {
+    color: #7ED321;
+}
+
+
+
+
+
+/* Default Style */
+
+/* Non-timeline */
+.top-wrapper {
+    width: 100%;
+    height: 500px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.site-avatar img{
+    width: 215px;
+    height: auto;
+
+    margin-top: 50px;
+    border-radius: 100%;
+}
+
+.major-info h2 {
+    font-size: 1.6em;
+    font-weight: 400;
+
+    line-height: 1em;
+    margin-bottom: 0;
+}
+
+.major-info p{
+    font-size: .9em;
+    opacity: .5;
+
+    line-height: .5em;
+    margin-top: 1em;
+}
+
+/* Timeline */
+
+/* Timeline shapes */
+.timeline {
+    width: 61.8%;
+    background-color: red;
+    margin: 50px auto;
+}
+
+.timeline-item #set {
+    position: absolute;
+    left: 50%;
+}
+
+#set #circle, #set #line {
+    position: relative;
+    text-align: center;
+    left: -50%;
+    margin: .3em auto;
+}
+
+#set #circle {
+    width: .7em;
+    height: .7em;
+    border: .4em blue solid;
+    border-radius: 100%;
+}
+
+#set #line {
+    border: .2em blue solid;
+    width: 0;
+    height: 25px;
+    margin: .35em auto;
+}
+
+/* Timeline description */
+#desc {
+    width: 50%;
+    min-width: 275px;
+    clear: both;
+    margin: -25px 0;
+}
+
+#info {
+    padding: 5px 30px;
+}
+
+#desc #info h1 {
+    margin: 0;
+}

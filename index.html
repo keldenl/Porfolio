@@ -2,17 +2,31 @@
 layout: default
 ---
 
-<div class="posts">
+<div class="timeline">
   {% for post in site.posts %}
-    <article class="post">
+    <article class="timeline-item">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+    	<!-- Timeline item description -->
+    	{% assign curr_idx = {{forloop.index}} | modulo: 2 %}
+    	{% assign set_top = {{forloop.index0}} | times: 200 %}
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    	{% if curr_idx != 0 %}
+	    	<div id="desc" style="float:right; text-align: left; background-color: green">
+    	{% else %}
+	    	<div id="desc" style="float:left; text-align: right;  background-color: purple;">
+    	{% endif %}
+    			<div id="set">
+			    	<div id="circle"></div>
+			    	<div id="line"></div>
+		    	</div>
+		    	<div id="info">
+		    		<h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+		    		<p>{{ post.role }}</p>
+					<div class="summ">
+						{{ post.excerpt }}
+					</div>
+				</div>
+			</div>
     </article>
   {% endfor %}
 </div>

@@ -7,25 +7,42 @@ layout: default
     <article class="timeline-item">
 
     	<!-- Timeline item description -->
+
+    	<!-- Set proper box colors -->
+    	{% if post.cat == "Projects" %}
+    		{% assign curr_color = "#458EE5" %}
+    	{% endif %}
+
+		{% if post.cat == "Design" %}
+			{% assign curr_color = "#F6A623" %}
+    	{% endif %}
+
+		{% if post.cat == "UX" %}
+			{% assign curr_color = "#7ED321" %}
+    	{% endif %}
+
+    	<!-- Manage loop -->
     	{% assign curr_idx = {{forloop.index}} | modulo: 2 %}
     	{% assign set_top = {{forloop.index0}} | times: 200 %}
 
     	{% if curr_idx != 0 %}
-	    	<div id="desc" style="float:right; text-align: left; background-color: green">
+	    	<div id="desc" style="float:right; text-align: left;">
     	{% else %}
-	    	<div id="desc" style="float:left; text-align: right;  background-color: purple;">
+	    	<div id="desc" style="float:left; text-align: right;">
     	{% endif %}
     			<div id="set">
-			    	<div id="circle"></div>
-			    	<div id="line"></div>
+			    	<div id="circle" style="border-color: {{ curr_color }}" "></div>
+			    	<div id="line" style="border-color: {{ curr_color }}""></div>
 		    	</div>
-		    	<div id="info">
-		    		<h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-		    		<p>{{ post.role }}</p>
-					<div class="summ">
-						{{ post.excerpt }}
+		    	<a href="{{ site.baseurl }}{{ post.url }}">
+			    	<div id="info">
+			    		<p id="date" style="color:{{ curr_color }}"> {{ post.date | date: "%B %e, %Y" }}</p>
+			    		<h1>{{ post.title }}</h1>
+			    		<p id="role">{{ post.role }}</p>
+						<div id="summ">
+							{{ post.excerpt }}
+						</div>
 					</div>
-				</div>
 			</div>
     </article>
   {% endfor %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: OutfitIt
-cat: Projects
+title: Test
+cat: UX
 role: Front-End Developer
 ---
 

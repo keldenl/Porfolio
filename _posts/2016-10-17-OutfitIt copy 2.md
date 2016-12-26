@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OutfitIt
+title: Test 2
 cat: Projects
 role: Front-End Developer
 ---

@@ -1,0 +1,85 @@
+html {
+  height: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: 105%;
+
+    margin: 0;
+    padding: 0;
+
+    /* Footer style */
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* Wraps all the content*/
+.wrapper {
+	flex: 1;
+}
+
+/* Navbar Style */
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: .75rem 1.75rem;
+    overflow: hidden;
+}
+
+.nav-butt {
+    float: right;
+    padding: 25px 17px;
+}
+
+.nav-butt a {
+    display: block;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+
+    /* Fade hover effect */
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+
+    transition:.5s;
+}
+
+/* Navbar Custom hovers */
+#pro:hover {
+    color: #458EE5;
+}
+
+#des:hover {
+    color: #F6A623;
+}
+
+#ux:hover {
+    color: #7ED321;
+}
+
+
+/* Footer */
+.footer {
+	font-size: 95%;
+	color: gray;
+    background-color: black;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer a {
+	text-decoration: none;
+	color: lightgray;
+}
+
+.footer a:hover{
+	text-decoration: underline;
+}

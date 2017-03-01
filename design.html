@@ -1,0 +1,21 @@
+---
+layout: cat
+title: Design | KeldenL
+cat: Design
+style: style-des
+---
+
+<div class="cat-items">
+  {% for post in site.posts %}
+	<!-- Manage loop -->
+	{% if post.cat == "Design" %}
+	    <article class="cat-item">
+			<img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/428/770/datas/gallery.jpg">
+			<div>
+	    		<a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
+	    		<p id="role">{{ post.role }}</p>
+			</div>
+	    </article>
+	{% endif %}
+  {% endfor %}
+</div>

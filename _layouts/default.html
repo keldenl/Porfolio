@@ -15,40 +15,36 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <!-- Main stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="global.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/global.css" />
 
+    <!-- Specific stylesheets -->
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
   </head>
 
   <body>
+    <div class="wrapper">
+      <div class="top-wrapper">
+        <ul class="nav-bar">
+        {% include nav.html %}
+          <header class="profile">
+            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
-    <div class="top-wrapper">
-      {% include nav.html %}
-        <header class="profile">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+            <div class="major-info">
+              <h2>Kelden Lin</h2>
+              {% for major in site.majors %}
+                <p> {{ major }} </p>
+              {% endfor %}
+            </div>
+          </header>
+      </div>
 
-          <div class="major-info">
-            <h2>Kelden Lin</h2>
-            {% for major in site.majors %}
-              <p> {{ major }} </p>
-            {% endfor %}
-          </div>
-        </header>
-    </div>
-
-    <div id="main" role="main" class="container">
-      {{ content }} <!-- WHERE ALL THE STUFF IS -->
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
+      <div id="main" role="main" class="container">
+        {{ content }} <!-- WHERE ALL THE STUFF IS -->
       </div>
     </div>
-
+    {% include footer.html %}
     {% include analytics.html %}
   </body>
 </html>

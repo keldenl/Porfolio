@@ -26,13 +26,13 @@ layout: default
     	{% assign set_top = {{forloop.index0}} | times: 200 %}
 
     	{% if curr_idx != 0 %}
-	    	<div id="desc" style="float:right; text-align: left;">
+	    	<div id="desc" class="right-item">
     	{% else %}
-	    	<div id="desc" style="float:left; text-align: right;">
+	    	<div id="desc" class="left-item">
     	{% endif %}
     			<div id="set">
-			    	<div id="circle" style="border-color: {{ curr_color }}" "></div>
-			    	<div id="line" style="border-color: {{ curr_color }}""></div>
+			    	<div id="circle" style="border-color: {{ curr_color }}"></div>
+			    	<div id="line" style="border-color: {{ curr_color }}; background-color: {{ curr_color }}"></div>
 		    	</div>
 		    	<a href="{{ site.baseurl }}{{ post.url }}">
 			    	<div id="info">

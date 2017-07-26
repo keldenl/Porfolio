@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      {% if page.title %}
+        {{ page.title }} |
+      {% endif %}
+
+      {{ site.name }}
+    </title>
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Main stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/animate.css"/>
+
+    <!-- Specific stylesheets -->
+    <link rel="stylesheet" type="text/css" href="../styles/style-cat.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style-post.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/prism.css" />
+  </head>
+
+  <body>
+	   <script src="../prism.js"></script>
+  <!-- Count how many items you have in this category -->
+    {% assign catNum = 0 %}
+    {% for post in site.posts %}
+      {% if post.cat == page.cat %}
+        {% assign catNum = catNum | plus:1 %}
+      {% endif %}
+    {% endfor %}
+    <div class="wrapper">
+      <div class="top-wrapper">
+        <div id="gold-wrapper">
+          <ul class="nav-bar">
+            <li class="nav-butt nav-info">
+              <span><img src="../images/cat-icons/{{ page.cat }}.png"></span>
+            </li>
+            <li class="nav-butt nav-info">
+              <span id="cat-title">{{ page.cat }}</span><br/>
+              <span id="cat-num">{{ catNum }} projects completed</span>
+            </li>
+          {% include nav.html %}
+        </div>
+      </div>
+      <br />
+      <div id="main" role="main" class="container animated fadeIn">
+        <!-- WHERE ALL THE STUFF IS -->
+        {{ content }}
+      </div>
+    </div>
+    {% include footer.html %}
+    {% include analytics.html %}
+  </body>
+</html>

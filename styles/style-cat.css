@@ -5,6 +5,8 @@ body {
 .top-wrapper {
 	background-color: #282828;
 	border-top: 5px solid;
+	-webkit-animation-duration: .7s;
+	animation-duration: .7s;
 }
 
 /* Makes the navbar items closer to the center */
@@ -19,24 +21,23 @@ body {
 }
 
 .nav-info {
-    float: left;
-    padding: 15px 5px;
+  float: left;
+  padding: 15px 10px 15px 0;
 }
 
 .nav-info img {
-	width: 55px;
+	width: 50px;
 	height: auto;
 	border-radius: 100%;
-	margin-top: -5px;
 }
 
 #cat-title {
-    font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 #cat-num {
-    font-size: .9rem;
-    color: #4A4A4A;
+  font-size: .9rem;
+  color: #4A4A4A;
 }
 
 #breadcrumb {
@@ -46,27 +47,56 @@ body {
 
 /* Item styles */
 .cat-items {
-    width: 61.8%;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  width: calc(61.8% + 15px);
+  height: 100%;
+  margin: auto;
+
+	/* Flex row stuff */
+  display: flex;
+	flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .cat-item {
-    width: calc(33% - 15px);
-    vertical-align: top;
-    display: inline-block; 
-    text-align: left;
-    background-color: #2D2D2D;
-    margin: 15px 7.5px 15px 0;
+  width: calc(33% - 15px);
+  vertical-align: top;
+  display: inline-block;
+  text-align: left;
+  background-color: #2D2D2D;
+  margin: 15px 7.5px 0 7.5px;
+
+  /* Fade hover effect */
+  -o-transition:.25s;
+  -ms-transition:.25s;
+  -moz-transition:.25s;
+  -webkit-transition:.25s;
+	transition: .25s;
 }
 
-.cat-item img{
-	width: 100%;
-	height: auto;
+.cat-item:hover {
+	box-shadow: 0 12px 15px rgba(0,0,0,0.20), 0 5px 5px rgba(0,0,0,0.17);
+}
+
+.curr-img{
 	padding: 0;
+	opacity: .8;
+	height: 175px;
+  background-size: cover;
+	background-size: auto 200px;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  /* Fade hover effect */
+  -o-transition:.25s;
+  -ms-transition:.25s;
+  -moz-transition:.25s;
+  -webkit-transition:.25s;
+	transition: .25s;
+}
+
+.curr-img:hover {
+	opacity: 1;
 }
 
 .cat-item div {
@@ -78,7 +108,7 @@ body {
 	color: #C8C8C8;
 }
 
-.cat-item a:hover, #breadcrumb a:hover {
+#breadcrumb a:hover {
 	text-decoration: underline;
 }
 

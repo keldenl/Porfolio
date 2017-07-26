@@ -10,7 +10,7 @@ style: style-des
 	<!-- Manage loop -->
 	{% if post.cat == "Design" %}
 	    <article class="cat-item">
-			<img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/428/770/datas/gallery.jpg">
+      <div class="curr-img" style="background-image:url('../images/posts/{{ post.title }}.gif')"></div>
 			<div>
 	    		<a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
 	    		<p id="role">{{ post.role }}</p>

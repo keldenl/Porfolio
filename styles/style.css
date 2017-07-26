@@ -1,5 +1,5 @@
 body {
-    background: url(images/bg.png) no-repeat; 
+    background: url(../images/bg.png) no-repeat;
     background-size: 100% auto;
     background-color: #0A0D10;
 }
@@ -8,11 +8,12 @@ body {
 /* Non-timeline */
 .top-wrapper {
     width: 100%;
-    height: 475px;
 }
 
 .profile {
     text-align: center;
+    -webkit-animation-duration: .9s;
+    animation-duration: .9s;
 }
 
 .site-avatar img{
@@ -21,6 +22,17 @@ body {
 
     margin-top: 50px;
     border-radius: 100%;
+
+    /* Fade hover effect */
+    -o-transition:.25s;
+    -ms-transition:.25s;
+    -moz-transition:.25s;
+    -webkit-transition:.25s;
+    transition: .25s;
+}
+
+.site-avatar img:hover {
+  	box-shadow: 0 12px 15px rgba(0,0,0,0.20), 0 5px 5px rgba(0,0,0,0.17);
 }
 
 .major-info h2 {
@@ -37,6 +49,13 @@ body {
 
     line-height: .3rem;
     margin-top: 1rem;
+}
+
+.container {
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
 }
 
 /* Timeline */
@@ -77,6 +96,16 @@ body {
     margin: .4rem auto;
 }
 
+.right-item {
+    float:right;
+    text-align: left;
+}
+
+.left-item {
+    float:left;
+    text-align: right;
+}
+
 /* Timeline description */
 #desc {
     width: 50%;
@@ -94,7 +123,7 @@ body {
     -moz-transition:.25s;
     -webkit-transition:.25s;
 
-    transition:.25s;
+    transition: .25s;
 }
 
 #info:hover {
@@ -136,5 +165,21 @@ body {
 @media only screen and (max-width: 850px) {
     .timeline {
         width: 90%;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .right-item, .left-item {
+        float:left;
+        text-align: left;
+    }
+
+    #desc {
+        width: 100%;
+        height: auto;
+    }
+
+    #set {
+        left: 7.5%!important;
     }
 }

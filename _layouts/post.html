@@ -1,19 +1,23 @@
 ---
-layout: default
+layout: template-post
 ---
 
 <article class="post">
-  <h1>{{ page.title }}</h1>
-
- {{ page.relative_path }}
-
-  <div class="entry">
-    {{ content }}
+  <div class="post-container">
+    <h1 class="main-title">{{ page.title }}</h1>
+    <h3 class="subtitle">{{ page.role }} </h1>
   </div>
+  <img class="post-img" src="../images/posts/{{ page.title }}.gif"/>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
+  <div class="post-container">
+    <h3 style="opacity:1;text-transform:uppercase" class="subtitle">{{ page.date | date: "%B %e, %Y" }}</h3>
+    <p class="entry">
+      <h2>What is {{ page.title }}?</h2>
+
+      {{ content }}
+    </p>
+
+    <!--{{ page.relative_path }}-->
+    {% include disqus.html %}
   </div>
-
-  {% include disqus.html %}
 </article>

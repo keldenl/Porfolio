@@ -135,7 +135,7 @@ body {
 	}
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 825px) {
 /*	body {
 		background-color: red;
 	}*/
@@ -145,7 +145,7 @@ body {
 	}
 
 	#breadcrumb {
-		margin-left: 5%;
+		margin-left: calc(5% + 7.5px);
 	}
 
 	.resp-nav {
@@ -154,8 +154,8 @@ body {
 	}
 
 	.nav-butt {
-		padding-top: 5px;
-		padding-bottom: 5px;
+		padding-top: 2.5px;
+		padding-bottom: 12.5px;
 	}
 }
 

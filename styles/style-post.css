@@ -52,3 +52,15 @@ strong, h2 {
   border: 1px #181818 solid;
   max-width: 100%;
 }
+
+
+
+@media only screen and (max-width: 550px) {
+	.post-container {
+		width: 80%
+	}
+
+  #gold-wrapper {
+    width: 90%;
+  }
+}

@@ -33,7 +33,7 @@ body {
 
 .nav-butt {
   float: right;
-  padding: 25px 17px;
+  padding: 25px 15px 25px 7.5px;
 }
 
 .nav-butt a {
@@ -53,6 +53,9 @@ body {
 }
 
 /* Navbar Custom hovers */
+#home:hover {
+  color: #F44336;
+}
 #pro:hover {
     color: #458EE5;
 }
@@ -64,6 +67,7 @@ body {
 #ux:hover {
     color: #7ED321;
 }
+
 
 
 /* Footer */

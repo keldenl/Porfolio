@@ -1,11 +1,10 @@
 .top-wrapper {
   background-color: #1b1b1b;
-  border: none;
+	border-top: 5px solid;
 }
 
 #gold-wrapper{
   width: 70%;
-  border-top: none;
   border-bottom: 1px solid #282828;
 }
 

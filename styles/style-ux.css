@@ -2,10 +2,18 @@
 	border-color: #7ED321;
 }
 
+.progress-bar {
+	background-color: #7ED321;
+}
+
 #ux {
 	color: #7ED321!important;
 }
 
 .curr-bread {
+	color: #7ED321;
+}
+
+.post-container a {
 	color: #7ED321;
 }

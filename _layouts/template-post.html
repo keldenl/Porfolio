@@ -25,10 +25,20 @@
     <link rel="stylesheet" type="text/css" href="../styles/style-post.css" />
     <link rel="stylesheet" type="text/css" href="../styles/style-{{ page.cat }}.css" />
     <link rel="stylesheet" type="text/css" href="../styles/prism.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../scroll-progress.js"></script>
+
   </head>
 
   <body>
-	   <script src="../prism.js"></script>
+    <script src="../prism.js"></script>
+
+    <!-- Top Progress Bar -->
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+    
   <!-- Count how many items you have in this category -->
     {% assign catNum = 0 %}
     {% for post in site.posts %}

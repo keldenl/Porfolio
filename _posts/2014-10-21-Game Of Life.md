@@ -92,6 +92,7 @@ First of all, I must create a board. This world is going to be a 2D grid, so I'l
 Life[][] myArray = new Life[cols][rows];</code></pre>
 
 Also, I would like the draw the points. We will get into drawing the points in the next section, but lets just pretend the drawLife function can draw life with parameters of drawLife(posX, posY, currentState). Creating a random board and drawing points both use double forloops, for we are placing values in a 2D array. The randBool function will be explained in the next section.
+
 <pre class="line-numbers"><code class="language-java">for (int i = 0; i < cols; i++) {
 	for (int j = 0; j < rows; j++) {
 		boolean status = randBool();
@@ -108,6 +109,7 @@ for (int i = 0; i < cols; i++) {
 }</code></pre>
 
 OH! Forgot to mention. We only want this happening once, so we must put all of this within a if statement that only runs once.
+
 <pre class="line-numbers"><code class="language-java">boolean start = true;
 
 if (start == true) {
@@ -128,5 +130,111 @@ So the conditions, in coding language, is basically:
 1. if (currentState == false && neighbors == 3) -> nextState = true
 2. if (currentState == true && (neighbors == 1 || neighbors > 3) -> nextState = false
 Remember, we don't want to intefere with the current grid, which is why we change the values of the next state. We then set all the values current values to the next values (after it's all processed), and draw the life again.
+
+<pre class="line-numbers"><code class="language-java">myArray[i][j].living = myArray[i][j].next;
+drawLife(i, j, myArray[i][j].living);
+Java
+The whole A.I. part of the code looks like this:
+
+// create random board
+if (start == true) {
+	start = false;
+	for (int i = 0; i < cols; i++) {
+	  for (int j = 0; j < rows; j++) {
+	    boolean status = randBool();
+	    myArray[i][j] = new Life(i, j, status, false);
+	  }
+	}
+
+	// Draw points
+	for (int i = 0; i < cols; i++) {
+	  for (int j = 0; j < rows; j++) {
+	    drawLife(i, j, myArray[i][j].living);
+	  }
+	}
+}
+
+int neighbors;
+// simulating life
+for (int i = 0; i < cols; i++) {
+	for (int j = 0; j < rows; j++) {
+	  neighbors = countNeighbor(i, j);
+	  if (myArray[i][j].living == false && neighbors == 3) {
+	    myArray[i][j].next = true;
+	  }
+
+	  if (myArray[i][j].living == true && (neighbors == 1 || neighbors > 3)) {
+	    myArray[i][j].next = false;
+	  }
+	}
+}
+
+//make the new values
+for (int i = 0; i < cols; i++) {
+	for (int j = 0; j < rows; j++) {
+	  myArray[i][j].living = myArray[i][j].next;
+	  drawLife(i, j, myArray[i][j].living);
+	}
+}</code></pre>
+
+<br>
+**Finishing Touches**
+<h3>Draw Life</h3>
+I just created a function with x, y, state (alive or not) parameters to determine where to draw the life cell. I had a videoScale variable, which determined how "big" each cell was. If it was alive, I would fill in white (255), if not, I would fill in black (0). No matter the circumstance, I would still draw a border around each cell.
+
+<pre class="line-numbers"><code class="language-java">void drawLife (int posX, int posY, boolean life) {
+	int x = posX*videoScale;
+	int y = posY*videoScale;
+
+	//determine the cell color (filled in or not)
+	if (life) {
+		fill(255);
+	} else {
+		fill(0);
+	}
+
+	stroke(27, 155, 70); //draws border
+	rect(x, y, videoScale, videoScale); //fills in the actual cell
+}</code></pre>
+
+<br>
+<h3>Resetting the world</h3>
+I didn't want to restart the program everytime I wanted a new world with random values. I added a keyPress checker, if the user pressed "R", then the board would reset (or start = true again and run it once more)!
+
+<pre class="line-numbers"><code class="language-java">if (keyPressed == true && (key == 'r' || key == 'R')) {
+	start = true;
+}</code></pre>
+
+<br>
+<h3>Setup & Variables</h3>
+As I've explained along, there are some variables that were already initialized. Here are all of them:
+
+<pre class="line-numbers"><code class="language-java">//size of world
+int cols = 50;
+int rows = 50;
+
+int videoScale = 10; //scale of the cells (10x10)
+
+// Declare 2D array
+Life[][] myArray = new Life[cols][rows];
+
+boolean start = true;
+Java
+Because of our video scale of 10 and 50 columns & rows, the size of the window has to be 500x500 (50*10 = 500). Set the background to black and frameRate to 15. Increasing the frameRate would increase the speed of the simulation. I found 15 to be a good speed to view the simulation.
+
+void setup() {
+	size(500, 500);
+	background(0);
+	frameRate(15);
+}</code></pre>
+
+<br>
+**Full Code + Demo**
+
+
+We're DONE! Click [here](http://www.openprocessing.org/sketch/166582) for the online demo. Links to download all the files have two options, [Processing + Executable](../download/GameOfLife_EXE.zip) or just the [Zipped .Pde file](../download/GameOfLife.zip). Copy the [full code](../download/GameOfLife.pde) for the lazy.
+
+
+*Please leave your questions or feedback below! What do you think about the Game of Life?*
 
 <br>

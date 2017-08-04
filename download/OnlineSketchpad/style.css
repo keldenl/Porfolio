@@ -1,0 +1,17 @@
+body {
+    background-color: #DEDEDE;
+    background-image: url("bg.png");
+    background-repeat: no-repeat;
+    background-position: auto center;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: #777777;
+}
+
+a:hover {
+    color: #999999;
+}

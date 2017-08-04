@@ -232,7 +232,7 @@ void setup() {
 **Full Code + Demo**
 
 
-We're DONE! Click [here](http://www.openprocessing.org/sketch/166582) for the online demo. Links to download all the files have two options, [Processing + Executable](../download/GameOfLife_EXE.zip) or just the [Zipped .Pde file](../download/GameOfLife.zip). Copy the [full code](../download/GameOfLife.pde) for the lazy.
+We're DONE! Click [here](http://www.openprocessing.org/sketch/166582) for the online demo. Links to download all the files have two options, [Processing + Executable](../download/GameOfLife/GameOfLife_EXE.zip) or just the [Zipped .Pde file](../download/GameOfLife/GameOfLife.zip). Copy the [full code](../download/GameOfLife/GameOfLife.pde) for the lazy.
 
 
 *Please leave your questions or feedback below! What do you think about the Game of Life?*

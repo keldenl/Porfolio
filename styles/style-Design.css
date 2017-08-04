@@ -17,3 +17,11 @@
 .post-container a {
 	color: #F6A623;
 }
+
+.cd-top {
+  background: #F6A623 url(../images/cd-top-arrow.svg) no-repeat center 50%;
+}
+
+.no-touch .cd-top:hover {
+  background-color: #F6A623;
+}

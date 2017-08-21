@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Risen Esports
-cat: UX
+cat: Design
 role: Brand Designer
 ---
 
-OutfitIt is a web-based application that curates a trendy outfit according to the current weather. It allows you to import your wardrobe and picks styles that match your closet. This app will help you keep in style while dressing for the weather.
+Risen Esports is an amateur esports organization that strives to bring competitive League of Legends to all skill levels. It was originally founded by Travis Guyer, who developed a passion for competitive gaming and esports by participating in his schools LoL club, Ascension Esports, and HouseParty5v5.
+
+<br>
+**Rules behind the Game of Life**

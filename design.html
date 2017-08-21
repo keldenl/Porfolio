@@ -8,13 +8,15 @@ cat: Design
   {% for post in site.posts %}
 	<!-- Manage loop -->
 	{% if post.cat == "Design" %}
-	    <article class="cat-item">
-      <div class="curr-img" style="background-image:url('../images/posts/{{ post.title }}.gif')"></div>
-			<div>
-	    		<a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
-	    		<p id="role">{{ post.role }}</p>
-			</div>
-	    </article>
+    <article class="cat-item">
+      <a href="{{ post.url }}">
+        <div class="curr-img" style="background-image:url('../images/posts/{{ post.title }}.gif')"></div>
+        <div>
+            <h1>{{ post.title }}</h1>
+            <p id="role">{{ post.role }}</p>
+        </div>
+      </a>
+    </article>
 	{% endif %}
   {% endfor %}
 </div>

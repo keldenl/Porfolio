@@ -35,6 +35,16 @@ body {
   	box-shadow: 0 12px 15px rgba(0,0,0,0.20), 0 5px 5px rgba(0,0,0,0.17);
 }
 
+.wip {
+  background-color: red;
+  display: inline-block;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+  font-size: .7rem;
+  font-weight: bold;
+}
+
 .major-info h2 {
     font-size: 1.7rem;
     font-weight: 400;

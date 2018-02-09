@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Online Sketchpad
-cat: Projects
-role: Personal Project
+cat: Sketch
+role: Web Sketch
 ---
 
 A sketchpad that anybody can use with just a browser. I wanted to bring my Processing sketches online, so I decided to learn p5.js – a open source project that does just that.

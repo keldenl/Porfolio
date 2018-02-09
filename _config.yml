@@ -6,12 +6,12 @@
 name: KeldenL Website
 
 # Majors
-majors: 
-  - Computer Science
-  - UX Design 
+majors:
+  - Informatics / UX Web Design
+  - Philosophy
 
 # Short bio or description
-description: Hey Guys! I'm Kelden Lin. A 19 year old college sophomore currently attending University of Washington, Seattle.
+description: Hey Guys! I'm Kelden Lin. A 20 year old college junior currently attending University of Washington, Seattle.
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: images/avatar.jpg
@@ -25,7 +25,7 @@ footer-links:
   dribbble:
   email:
   facebook:
-  github: 
+  github:
   instagram:
   linkedin:
   youtube: # channel/<your_long_string> or user/<user-name>

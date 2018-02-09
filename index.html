@@ -13,13 +13,13 @@ layout: default
     		{% assign curr_color = "#458EE5" %}
     	{% endif %}
 
+		{% if post.cat == "Sketch" %}
+			{% assign curr_color = "#7ED321" %}
+  	{% endif %}
+
 		{% if post.cat == "Design" %}
 			{% assign curr_color = "#F6A623" %}
-    	{% endif %}
-
-		{% if post.cat == "UX" %}
-			{% assign curr_color = "#7ED321" %}
-    	{% endif %}
+  	{% endif %}
 
     	<!-- Manage loop -->
     	{% assign curr_idx = {{forloop.index}} | modulo: 2 %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Game of Life
-cat: Projects
+cat: Sketch
 role: Personal Project
 ---
 

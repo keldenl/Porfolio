@@ -1,3 +1,7 @@
+@use postcss-custom-media;
+@use postcss-nested;
+@use cssnext;
+
 html {
   height: 100%;
 }
@@ -64,11 +68,9 @@ body {
     color: #F6A623;
 }
 
-#ux:hover {
+#sket:hover {
     color: #7ED321;
 }
-
-
 
 /* Footer */
 .footer {

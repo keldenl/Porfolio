@@ -38,12 +38,34 @@
                 <p> {{ major }} </p>
               {% endfor %}
 
-              <div class="wip">WEBSITE UNDER CONSTRUCTION</div>
+              <!-- <div class="wip">WEBSITE UNDER CONSTRUCTION</div> -->
+              <!-- still is wip but the label looks bad -->
             </div>
           </header>
       </div>
 
+
       <div id="main" role="main" class="container animated fadeInUp">
+
+    </br/>
+        <!-- Html Elements for Search -->
+        <div id="search-container">
+          <input type="text" id="search-input" placeholder="Search">
+          <ul id="results-container"></ul>
+        </div>
+
+        <!-- Script pointing to search-script.js -->
+        <script src="/js/search-script.js" type="text/javascript"></script>
+
+        <!-- Configuration -->
+        <script>
+        SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          searchResultTemplate: '<a href="{url}"><li>{title}</li></a>',
+          json: '/search.json'
+        })
+        </script>
         {{ content }} <!-- WHERE ALL THE STUFF IS -->
       </div>
     </div>

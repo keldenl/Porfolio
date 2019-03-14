@@ -78,9 +78,26 @@ body {
 .footer {
 	font-size: 95%;
 	color: gray;
-  background-color: black;
+  background-color: #070809;
   padding: 20px 0;
   text-align: center;
+}
+
+#social-bar a img {
+  width: 35px;
+  margin: 7.5px 5px 0 5px;
+
+  /* Fade hover effect */
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+
+  transition:.2s;
+}
+
+#social-bar a img:hover {
+  opacity: .7;
 }
 
 .footer a {

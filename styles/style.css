@@ -8,10 +8,10 @@ body {
 /* Non-timeline */
 .top-wrapper {
     width: 100%;
+    text-align: center;
 }
 
 .profile {
-    text-align: center;
     -webkit-animation-duration: .9s;
     animation-duration: .9s;
 }
@@ -70,16 +70,14 @@ body {
 
 /* Search */
 #search-container {
-  width: 61.8%;
+  width: 100%;
+  margin-top: -7.5px;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #search-container input[type='text'] {
-  width: 100%;
+  width: calc(100% - 30px);
   background-color: rgba(255, 255, 255, .1);
-  background-color: none;
   border-radius: 5px;
   border: none;
   padding: 10px 15px;
@@ -94,7 +92,7 @@ body {
 } */
 
 #results-container {
-  width: calc(100% + 30px);
+  width: 100%;
   background-color: rgba(255,255,255,.1);
   border-radius: 5px;
   padding: 0;
@@ -106,7 +104,6 @@ body {
   padding: 10px 15px;
   list-style: none;
   text-align: left;
-  border-bottom: .5px rgba(255,255,255,.1) solid;
 }
 
 #results-container li:hover {
@@ -116,6 +113,8 @@ body {
 
 #results-container a {
   color: white;
+  font-size: .8em;
+  font-weight: 300;
   text-decoration: none;
 }
 
@@ -175,8 +174,9 @@ body {
 }
 
 #info {
+    border-radius: 10px;
     margin: 0 25px;
-    padding: 2.5px 15px 10px;
+    padding: 7.5px 15px 10px;
 
     /* Fade hover effect */
     -o-transition:.25s;

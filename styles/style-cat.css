@@ -1,9 +1,8 @@
 body {
-	background-color: #1B1B1B;
+	background-color: #161616;
 }
 
 .top-wrapper {
-	background-color: #282828;
 	border-top: 5px solid;
 	-webkit-animation-duration: .7s;
 	animation-duration: .7s;
@@ -15,7 +14,17 @@ body {
     margin: auto;
 }
 
+.resp-nav {
+	display: inline-block;
+	float: right;
+}
+
+.nav-butt {
+	padding: 2.1em 15px 0 7.5px;
+}
+
 .nav-bar {
+	width: 100%;
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -26,18 +35,20 @@ body {
 }
 
 .nav-info img {
-	width: 50px;
+	width: 2.6em;
 	height: auto;
 	border-radius: 100%;
 }
 
 #cat-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+	font-weight: 500;
 }
 
 #cat-num {
-  font-size: .9rem;
-  color: #4A4A4A;
+	font-size: .8rem;
+  color: #555454;
+  font-weight: 400;
 }
 
 #breadcrumb {
@@ -63,8 +74,9 @@ body {
   vertical-align: top;
   display: inline-block;
   text-align: left;
-  background-color: #2D2D2D;
-  margin: 15px 7.5px 0 7.5px;
+  background-color: #212121;
+	border-radius: 10px;
+  margin: 0 7.5px 15px 7.5px;
 
   /* Fade hover effect */
   -o-transition:.25s;
@@ -82,6 +94,7 @@ body {
 	padding: 0;
 	opacity: .8;
 	height: 175px;
+	border-radius: 10px 10px 0 0;
   background-size: cover;
 	background-size: auto 200px;
   background-position: center center;
@@ -100,7 +113,7 @@ body {
 }
 
 .cat-item div {
-    padding: 5px 10px 15px 10px;
+	padding: 10px 10px 15px 15px;
 }
 
 .cat-item a, #breadcrumb a {
@@ -114,6 +127,7 @@ body {
 
 .cat-item h1 {
 	margin: 0px;
+	font-size: 1.3em;
 }
 
 .cat-item p {

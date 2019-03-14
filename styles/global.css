@@ -30,20 +30,22 @@ body {
 /* Navbar Style */
 .nav-bar {
   list-style-type: none;
+  display: inline-block;
   margin: 0;
   padding: .6rem 1.75rem .2rem 1.75rem;
   overflow: hidden;
 }
 
 .nav-butt {
-  float: right;
+  float: left;
   padding: 25px 15px 25px 7.5px;
 }
 
 .nav-butt a {
   display: block;
   color: white;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  font-weight: 500;
   text-align: center;
   text-decoration: none;
 

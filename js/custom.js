@@ -27,3 +27,23 @@ function updateDesc(el) {
   //summ.style.maxHeight = '100px';
   // summ.style.maxHeight = summ.style.maxHeight === '0px' ? '999999px' : '0px';
 }
+
+function onCatSelect(el) {
+  var currSelection = "";
+  var allSelections = document.querySelectorAll('input[name="category"]');
+
+  for (let s of allSelections) {
+    if (s.checked) { s.parentNode.classList.add("cat-selected"); currSelection = s.value; }
+    else { s.parentNode.classList.remove("cat-selected"); }
+  }
+
+  var allArticles = document.querySelectorAll('article');
+
+  console.log(currSelection)
+  for (let a of allArticles) {
+    // console.log(a.getAttribute("data-cat"))
+    // console.log(currSelection)
+    console.log(a.getAttribute("data-cat").toLowerCase().includes(currSelection))
+    a.style.display = a.getAttribute("data-cat").toLowerCase().includes(currSelection) || currSelection === "all" ? "inline-block" : "none";
+  }
+}

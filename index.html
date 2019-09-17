@@ -15,22 +15,24 @@ layout: default
 
     {% endif %}
 
-    <article class="timeline-item">
+    <!-- Timeline item description -->
 
-    	<!-- Timeline item description -->
+    <!-- Set proper box colors -->
+    {% if post.cat == "Key Work" %}
+      {% assign curr_color = "#458EE5" %}
+    {% endif %}
 
-    	<!-- Set proper box colors -->
-  	{% if post.cat == "Key Work" %}
-  		{% assign curr_color = "#458EE5" %}
-  	{% endif %}
+    {% if post.cat == "Side Project" %}
+      {% assign curr_color = "#7ED321" %}
+    {% endif %}
 
-		{% if post.cat == "Side Project" %}
-			{% assign curr_color = "#7ED321" %}
-  	{% endif %}
+    {% if post.cat == "Media" %}
+      {% assign curr_color = "#F6A623" %}
+    {% endif %}
 
-		{% if post.cat == "Media" %}
-			{% assign curr_color = "#F6A623" %}
-  	{% endif %}
+    <article class="timeline-item" data-cat="{{ post.cat }}">
+
+
 
     <!-- <a href="{{ site.baseurl }}{{ post.url }}">  onclick="showDesc(this)" -->
     <div class="info" style="border-left: 4px solid {{ curr_color }}" onclick="updateDesc(this)">

@@ -63,8 +63,8 @@ img.site-avatar{
 /* Timeline shapes */
 .timeline {
     /* width: 61.8%; */
-    margin-left: 20px;
-    padding-bottom: 100px;
+    margin-left: 40px;
+    padding-bottom: 50px;
 }
 
 .timeline-item, .timeline-item .set, .desc {
@@ -217,8 +217,17 @@ a.read-more:hover {
   }
 
   .major-info { margin: auto; max-width: none; }
+  .cat-container > label {
+    width: 40%;
+    display: inline-block;
+    margin: 5px 5px 0 0;
+  }
+  
+  .resp-nav { float: none; }
+  .nav-bar { text-align: center; }
 }
 
 @media only screen and (max-width: 475px) {
   .timeline-item { width: 100%; }
+  #gold-wrapper { width: 100%; }
 }

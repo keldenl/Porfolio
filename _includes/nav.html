@@ -2,30 +2,9 @@
 	<div class="resp-nav">
 		{% if page.title %}
 			<li class="nav-butt"><a id="home" href="../">Home</a></li>
-		{% else %}
-			<li class="nav-butt">
-					<!-- Html Elements for Search -->
-					<div id="search-container">
-						<input type="text" id="search-input" placeholder="Search">
-						<ul id="results-container"></ul>
-					</div>
-
-					<!-- Script pointing to search-script.js -->
-					<script src="/js/search-script.js" type="text/javascript"></script>
-
-					<!-- Configuration -->
-					<script>
-					SimpleJekyllSearch({
-						searchInput: document.getElementById('search-input'),
-						resultsContainer: document.getElementById('results-container'),
-						searchResultTemplate: '<a href="{url}"><li>{title}</li></a>',
-						json: '/search.json'
-					})
-					</script>
-			</li>
 		{% endif %}
-		<li class="nav-butt"><a id="pro" href="../projects">Projects</a></li>
-		<li class="nav-butt"><a id="sket" href="../sketch">Sketch</a></li>
-		<li class="nav-butt"><a id="des" href="../design">Design</a></li>
+		<li class="nav-butt"><a id="pro" href="../projects">Key Works</a></li>
+		<li class="nav-butt"><a id="sket" href="../sketch">Side Projects</a></li>
+		<li class="nav-butt"><a id="des" href="../design">Media</a></li>
 	</div>
 </ul>

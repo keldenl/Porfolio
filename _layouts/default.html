@@ -15,6 +15,10 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <script type="text/javascript" src="../js/custom.js">
+
+    </script>
+
     <!-- Main stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../styles/global.css" />
@@ -25,26 +29,48 @@
   </head>
 
   <body>
-    <div class="wrapper">
-      <div class="top-wrapper animated fadeInUp">
-          <header class="profile">
-            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+    <div class="top-wrapper animated fadeInDown">
+      <div id="gold-wrapper">
+        <ul class="nav-bar">
+        {% include nav.html %}
+      </div>
+    </div>
 
+
+    <!-- {% for major in site.majors %}
+      <p> {{ major }} </p>
+    {% endfor %} -->
+
+    <!-- <div class="wip">WEBSITE UNDER CONSTRUCTION</div> -->
+    <!-- still is wip but the label looks bad -->
+
+    <div class="landing-wrapper">
+      <div class="about-wrapper animated fadeInUp about-visible">
+            <img class="site-avatar" src="{{ site.avatar }}" />
             <div class="major-info">
               <h2>Kelden Lin</h2>
-              {% for major in site.majors %}
-                <p> {{ major }} </p>
-              {% endfor %}
+              <p>
+                Front-end – #Developer & #Designer, #iOSDev <br/>
 
-              <!-- <div class="wip">WEBSITE UNDER CONSTRUCTION</div> -->
-              <!-- still is wip but the label looks bad -->
+              </br/>Tech – #React, #NodeJS, #Swift, #SQL, #Firebase, #Jekyll, #Gatsby
+              </p>
             </div>
-          </header>
-          <ul class="nav-bar">
-          {% include nav.html %}
       </div>
 
-      <div id="main" role="main" class="container animated fadeInUp">
+      <!-- Take up the space of the about wrapper -->
+      <div class="about-wrapper animated fadeInUp about-hidden">
+        <img class="site-avatar" src="{{ site.avatar }}" />
+        <div class="major-info">
+          <h2>Kelden Lin</h2>
+          <p>
+            Front-end – #Developer & #Designer, #iOSDev <br/>
+
+          </br/>Tech – #React, #NodeJS, #Swift, #SQL, #Firebase, #Jekyll, #Gatsby
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-wrapper container animated fadeInUp">
         {{ content }} <!-- WHERE ALL THE STUFF IS -->
       </div>
     </div>

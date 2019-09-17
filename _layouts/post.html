@@ -6,17 +6,14 @@ comments: true
 <article class="post">
   <div class="post-container">
     <h1 class="main-title">{{ page.title }}</h1>
-    <h3 class="subtitle">{{ page.role }} </h1>
+    <h3 class="subtitle">{{ page.role }} </h3>
   </div>
   <img class="post-img" src="../images/posts/{{ page.title }}.gif">
 
   <div class="post-container">
     <h3 style="opacity:1;text-transform:uppercase" class="subtitle">{{ page.date | date: "%B %e, %Y" }}</h3>
-    <p class="entry">
-      <h2>What is {{ page.title }}?</h2>
-
-      {{ content }}
-    </p>
+    <h2>What is {{ page.title }}?</h2>
+    {{ content }}
 
     <h2> Discussion </h2>
     <!--{{ page.relative_path }}-->

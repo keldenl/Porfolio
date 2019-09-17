@@ -8,27 +8,6 @@ body {
 	animation-duration: .7s;
 }
 
-/* Makes the navbar items closer to the center */
-#gold-wrapper {
-    width: 61.8%;
-    margin: auto;
-}
-
-.resp-nav {
-	display: inline-block;
-	float: right;
-}
-
-.nav-butt {
-	padding: 2.1em 15px 0 7.5px;
-}
-
-.nav-bar {
-	width: 100%;
-	padding-left: 0;
-	padding-right: 0;
-}
-
 .nav-info {
   float: left;
   padding: 15px 10px 15px 0;

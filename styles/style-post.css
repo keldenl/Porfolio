@@ -102,6 +102,7 @@ strong, h2 {
 
 
 .cd-top {
+	z-index: 1;
   display: inline-block;
   height: 40px;
   width: 40px;

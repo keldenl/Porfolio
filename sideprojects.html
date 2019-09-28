@@ -1,13 +1,13 @@
 ---
 layout: cat
-title: Design | KeldenL
-cat: Design
+title: Side Projects
+cat: sideprojects
 ---
 
 <div class="cat-items">
   {% for post in site.posts %}
 	<!-- Manage loop -->
-	{% if post.cat == "Design" %}
+	{% if post.cat == "Side Project" %}
     <article class="cat-item">
       <a href="{{ post.url }}">
         <div class="curr-img" style="background-image:url('../images/posts/{{ post.title }}.gif')"></div>

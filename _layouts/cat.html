@@ -3,7 +3,7 @@
   <head>
     <title>
       {% if page.title %}
-        {{ page.title }} |
+        {{ page.title }} | KeldenL
       {% endif %}
 
       {{ site.name }}
@@ -29,7 +29,9 @@
   <!-- Count how many items you have in this category -->
     {% assign catNum = 0 %}
     {% for post in site.posts %}
-      {% if post.cat == page.cat %}
+      {% assign currCat = post.cat | split: " " %}
+      {% assign filteredCat = currCat[0] | downcase %}
+      {% if page.cat contains filteredCat %}
         {% assign catNum = catNum | plus:1 %}
       {% endif %}
     {% endfor %}
@@ -41,8 +43,8 @@
               <span><img src="../images/cat-icons/{{ page.cat }}.png" /></span>
             </li>
             <li class="nav-butt nav-info">
-              <span id="cat-title">{{ page.cat }}</span><br/>
-              <span id="cat-num">{{ catNum }} projects completed</span>
+              <span id="cat-title">{{ page.title }}</span><br/>
+              <span id="cat-num">{{ catNum }} completed</span>
             </li>
           {% include nav.html %}
         </div>

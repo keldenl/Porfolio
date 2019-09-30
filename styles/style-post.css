@@ -46,10 +46,10 @@ strong, h2 {
 
 .post-container img {
   padding: 15px;
-  margin: 10px 0;
+  margin: 10px auto;
   background-color: #282828;
   border: 1px #181818 solid;
-  max-width: 100%;
+  max-width: calc(100% - 30px);
 }
 
 .post-container a {
@@ -85,6 +85,25 @@ strong, h2 {
   -webkit-transition: width .6s ease;
   -o-transition: width .6s ease;
   transition: width .6s ease;
+}
+
+.product {
+  padding: 10px 15px;
+  color: white!important;
+  font-size: .9rem;
+  border-radius: 5px;
+  font-weight: 600;
+	background-color: gray;
+	transition: all .6s ease;
+}
+
+.product.gray {
+	background-color: gray;
+}
+
+.product:hover {
+	filter: brightness(110%);
+	text-decoration: none!important;
 }
 
 @media only screen and (max-width: 550px) {
@@ -153,4 +172,10 @@ strong, h2 {
     right: 30px;
     bottom: 30px;
   }
+
+		.post-img {
+			width: 61.8%;
+			display: block;
+			margin: auto;
+		}
 }

@@ -5,7 +5,7 @@ cat: Side Project
 role: Developer (Processing.JS Web App)
 ---
 
-A sketchpad that anybody can use with just a browser. I wanted to bring my Processing sketches online, so I decided to learn p5.js – a open source project that does just that.
+A sketchpad that anybody can use with just a browser. By learning p5.js, I was able to bring my Processing sketches online, including this sketchpad.
 
 <br>
 **Where it all started**

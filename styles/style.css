@@ -193,8 +193,17 @@ a.read-more:hover {
     clear: both;
 }
 
+
+.cat-label {
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  display: inline-block;
+  border-radius: 100%;
+}
+
 /* Responsiveness */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 968px) {
     .landing-wrapper {
       width: 100%;
     }
@@ -204,8 +213,6 @@ a.read-more:hover {
   .landing-wrapper {
     flex-direction: column!important;
   }
-
-  .major-info { }
 
   .about-visible {
     visibility: hidden;
@@ -222,7 +229,7 @@ a.read-more:hover {
     display: inline-block;
     margin: 5px 5px 0 0;
   }
-  
+
   .resp-nav { float: none; }
   .nav-bar { text-align: center; }
 }

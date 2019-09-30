@@ -23,7 +23,14 @@
     <!-- Specific stylesheets -->
     <link rel="stylesheet" type="text/css" href="../styles/style-cat.css" />
     <link rel="stylesheet" type="text/css" href="../styles/style-post.css" />
-    <link rel="stylesheet" type="text/css" href="../styles/style-{{ page.cat }}.css" />
+    {% assign category = "media" %}
+    {% if page.cat == "Key Work" %}
+      {% assign category = "keyworks" %}
+    {% elsif page.cat == "Side Project" %}
+      {% assign category = "sideprojects" %}
+    {% endif %}
+
+    <link rel="stylesheet" type="text/css" href="../styles/style-{{ category }}.css" />
     <link rel="stylesheet" type="text/css" href="../styles/prism.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -52,7 +59,7 @@
         <div id="gold-wrapper">
           <ul class="nav-bar">
             <li class="nav-butt nav-info">
-              <span><img src="../images/cat-icons/{{ page.cat }}.png"></span>
+              <span><img src="../images/cat-icons/{{ category }}.png"></span>
             </li>
             <li class="nav-butt nav-info">
               <span id="cat-title">{{ page.cat }}</span><br/>

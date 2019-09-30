@@ -5,12 +5,12 @@ cat: Side Project
 role: Front-end Developer (Web App)
 ---
 
-Japanese Translator takes English words and translates it to Japanese. The translator can also read aloud the translated Japanese.
+Japanese Translator takes English words, translates it to Japanese and reads aloud the translated Japanese IN MY VOICE!!
 
 <br>
 **The Process**
 
-My brother and I,
+*Developing...*
 
 <br>
 *Please leave your questions or feedback below! What do you think about Japanese Translator?*

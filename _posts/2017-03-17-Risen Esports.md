@@ -10,6 +10,8 @@ Risen Esports is an amateur esports organization that strives to bring competiti
 <br>
 **How Risen Esports all began**
 
+*Developing...*
+
 <br>
 *Please leave your questions or feedback below! What do you think about Risen Esports?*
 

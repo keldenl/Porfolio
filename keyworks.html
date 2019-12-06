@@ -10,7 +10,8 @@ cat: keyworks
   	{% if post.cat == "Key Work" %}
       <article class="cat-item">
         <a href="{{ post.url }}">
-          <div class="curr-img" style="background-image:url('../images/posts/{{ post.title }}.gif')"></div>
+          <img src="../images/posts/{{ post.title }}.gif" style="display:none" class="animated-bg">
+          <div class="curr-img" style="background-image:url('../images/posts/{{ post.title }}.jpg')"></div>
     			<div>
     	    		<h1>{{ post.title }}</h1>
     	    		<p id="role">{{ post.role }}</p>

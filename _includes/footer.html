@@ -1,4 +1,25 @@
-<div class="wrapper-footer animated fadeInUp">
+<!-- Script for lazyloading images -->
+<script>
+window.addEventListener('load', function(){
+    var allimages = document.getElementsByTagName('img');
+    
+    for (var i=0; i<allimages.length; i++) {
+        if (allimages[i].getAttribute('data-src')) {
+            allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
+        }
+    }
+    
+    var allBgImages = document.getElementsByClassName('animated-bg');
+    var allContainers = document.getElementsByClassName('curr-img');
+
+    for (var i=0; i<allBgImages.length; i++) {
+        console.log(allContainers[i]);
+        allContainers[i].style = "background-image:url('" + allBgImages[i].getAttribute('src') + "')";
+    }
+}, false)
+</script>
+
+ <div class="wrapper-footer animated fadeInUp">
   <div class="container">
     <footer class="footer">
       <div id ="social-bar">

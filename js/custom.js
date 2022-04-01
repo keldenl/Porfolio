@@ -18,7 +18,7 @@ function updateDesc(el) {
   butt.style.opacity = show ? '1' : '0'
   summ.style.maxHeight = show ? '300px' : '0px'
   summ.style.opacity = show ? '1' : '0'
-  summ.children[0].style.opacity = show ? '1' : '0'
+  // summ.children[0].style.opacity = show ? '1' : '0'
   // console.log(!summ.style.maxHeight)
   // // if (!summ.style.maxHeight) { summ.style.maxHeight = 0 }
   // var newHeight = !summ.style.maxHeight || summ.style.maxHeight === '0px' ? '500px' : 0

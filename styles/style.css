@@ -163,7 +163,7 @@ img.site-avatar{
   opacity: 0;
   max-height: 0px;
   overflow: hidden;
-  transition: all 0.35s ease-in, opacity 0.2s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 
 a.read-more {

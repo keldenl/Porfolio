@@ -5,56 +5,57 @@ layout: default
 <div class="timeline">
 
   {% for post in site.posts %}
-    {% assign new_year = post.date | date: "%Y" %}
-    <!-- Year Heading -->
-    {% if curr_year != new_year %}
-      {% assign curr_year = post.date | date: "%Y" %}
-      <!-- {% if forloop.first == false %} -->
-      <!-- {% endif %} -->
-        <h1 class="year-heading">{{ curr_year }}</h1>
+  {% assign new_year = post.date | date: "%Y" %}
+  <!-- Year Heading -->
+  {% if curr_year != new_year %}
+  {% assign curr_year = post.date | date: "%Y" %}
+  <!-- {% if forloop.first == false %} -->
+  <!-- {% endif %} -->
+  <h1 class="year-heading">{{ curr_year }}</h1>
 
-    {% endif %}
+  {% endif %}
 
-    <!-- Timeline item description -->
+  <!-- Timeline item description -->
 
-    <!-- Set proper box colors -->
-    {% if post.cat == "Key Work" %}
-      {% assign curr_color = "#458EE5" %}
-    {% endif %}
+  <!-- Set proper box colors -->
+  {% if post.cat == "Key Work" %}
+  {% assign curr_color = "#458EE5" %}
+  {% endif %}
 
-    {% if post.cat == "Side Project" %}
-      {% assign curr_color = "#7ED321" %}
-    {% endif %}
+  {% if post.cat == "Side Project" %}
+  {% assign curr_color = "#7ED321" %}
+  {% endif %}
 
-    {% if post.cat == "Media" %}
-      {% assign curr_color = "#F6A623" %}
-    {% endif %}
+  {% if post.cat == "Media" %}
+  {% assign curr_color = "#F6A623" %}
+  {% endif %}
 
-    <article class="timeline-item" data-cat="{{ post.cat }}">
+  <article class="timeline-item" data-cat="{{ post.cat }}">
 
 
 
     <!-- <a href="{{ site.baseurl }}{{ post.url }}">  onclick="showDesc(this)" -->
     <div class="info" style="border-left: 4px solid {{ curr_color }}" onclick="updateDesc(this)">
-        <!-- <div class="curr-img" style="background-image:url('../images/posts/{{ post.title }}.gif')"></div> -->
+      <!-- <div class="curr-img" style="background-image:url('../images/posts/{{ post.title }}.gif')"></div> -->
 
-        <!-- <img src="../images/posts/{{ post.title }}.gif" alt=""> -->
+      <!-- <img src="../images/posts/{{ post.title }}.gif" alt=""> -->
       <p class="date" style="color:{{ curr_color }}"> {{ post.date | date: "%B %e" }}</p>
       <h1>{{ post.title }}</h1>
       <p class="role">{{ post.role }}</p>
       <div class="summ">
         {{ post.excerpt }}
-        <a class="read-more" style="background-color: {{ curr_color }}; border-color: {{ curr_color }}" href="{{ side.baseurl }}{{ post.url }}">View {{ post.cat }}</a>
+        <a class="read-more" style="background-color: {{ curr_color }}; border-color: {{ curr_color }}"
+          href="{{ side.baseurl }}{{ post.url }}">View {{ post.cat }}</a>
       </div>
     </div>
-  <!-- </a> -->
+    <!-- </a> -->
 
-      <!-- <div class="desc">
+    <!-- <div class="desc">
     			<div class="set">
 			    	<div class="circle" style="border-color: {{ curr_color }}"></div>
 			    	<div class="line" style="border-color: {{ curr_color }}; background-color: {{ curr_color }}"></div>
 		    	</div>
 			</div> -->
-    </article>
+  </article>
   {% endfor %}
 </div>

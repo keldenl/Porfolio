@@ -99,7 +99,11 @@ body {
 }
 
 .about-visible { position: fixed; }
-.about-hidden { visibility: hidden; }
+.about-hidden { 
+  visibility: hidden; 
+  margin-right: 25px;
+
+}
 
 .timeline-wrapper {
   flex-grow: 2;

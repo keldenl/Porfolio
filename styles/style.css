@@ -29,22 +29,23 @@ img.site-avatar{
 }
 
 .major-info {
-  max-width: 200px;
+  max-width: 225px;
+  
 }
 
 .major-info h2 {
-    font-size: 1.7rem;
-    font-weight: 400;
+  font-size: 1.7rem;
+  font-weight: 400;
 
-    line-height: 1.5rem;
-    margin-bottom: 0;
+  line-height: 1.5rem;
+  margin-bottom: 0;
 }
 
 .major-info p{
-    font-size: 1rem;
-    opacity: .75;
-    line-height: 1.25rem;
-    margin-top: 1rem;
+  font-size: 1rem;
+  opacity: .75;
+  line-height: 1.25rem;
+  margin-top: 1rem;
 }
 
 .container {

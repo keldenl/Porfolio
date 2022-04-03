@@ -21,7 +21,7 @@ Open any image and have it resize into a 16:9 iPhone lockscreen size. Vertical s
 <br>
 **Product**
 
-<a href="../download/Resize2iPhone/Resize2iPhone.jar" target="_blank" class="product">Download Resize2iPhone</a>
+<a href="../downloads/Resize2iPhone/Resize2iPhone.jar" target="_blank" class="product">Download Resize2iPhone</a>
 
 <br><br>
 *Please leave your questions or feedback below! What do you think about Resize2iPhone?*

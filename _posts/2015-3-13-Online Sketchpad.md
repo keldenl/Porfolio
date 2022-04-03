@@ -22,7 +22,7 @@ The abstract brush takes in the current location of the cursor and adjusts its w
 
 It wasn't a complicated project at all, but it was a interesting experience to work with p5.js for the first time and realizing its flexibility.
 
-Here's a [demo](../download/OnlineSketchpad/source-code/) of it, and download the source code [here](../download/OnlineSketchpad/source-code.zip).
+Here's a [demo](../downloads/OnlineSketchpad/source-code/) of it, and download the source code [here](../downloads/OnlineSketchpad/source-code.zip).
 
 <br>
 *Please leave your questions or feedback below! What do you think about the Online Sketchpad?*
